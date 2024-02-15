@@ -89,8 +89,8 @@ const ContactForm: FC<ContactProps> = ({ contact }) => {
           control={control}
           rules={{ 
             required: { value: true, message: 'First Name is required' }, 
-            min: { value: 3, message: 'First name should be at least 3 characters' },
-            max: { value: 25, message: 'First name should not exceed 25 characters' }
+            minLength: { value: 3, message: 'First name should be at least 3 characters' },
+            maxLength: { value: 25, message: 'First name should not exceed 25 characters' }
           }}
           render={({ field }) => (
             <>
@@ -114,8 +114,8 @@ const ContactForm: FC<ContactProps> = ({ contact }) => {
           control={control}
           rules={{ 
             required: false, 
-            min: { value: 2, message: 'Last name should be at least 2 characters' },
-            max: { value: 30, message: 'Last name should not exceed 30 characters' }
+            minLength: { value: 2, message: 'Last name should be at least 2 characters' },
+            maxLength: { value: 30, message: 'Last name should not exceed 30 characters' }
           }}
           render={({ field }) => (
             <>
